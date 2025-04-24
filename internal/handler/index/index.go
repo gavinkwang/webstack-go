@@ -20,5 +20,5 @@ func (h *Handler) Index(ctx *gin.Context) {
 		return
 	}
 
-	ctx.HTML(http.StatusOK, "index.html", resp)
+	ctx.HTML(http.StatusOK, "base.html", resp)
 }

@@ -44,6 +44,7 @@ func NewDB(conf *viper.Viper, l *log.Logger) *gorm.DB {
 	)
 
 	dsn := conf.GetString("data.db.user.dsn")
+	l.Info("dns", zap.String("dsn", dsn))
 	switch conf.GetString("data.db.user.driver") {
 	case gormx.MYSQL:
 		dialector = mysql.Open(dsn)

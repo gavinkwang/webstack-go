@@ -14,7 +14,7 @@ const TableNameStSite = "st_site"
 type StSite struct {
 	ID          int        `gorm:"column:id;type:INTEGER;primaryKey" json:"id"`
 	CategoryID  int        `gorm:"column:category_id;type:int(11)" json:"category_id"`
-	Title       string     `gorm:"column:title;type:varchar(50)" json:"title"`
+	Title       string     `gorm:"column:title;type:varchar(255)" json:"title"`
 	Icon        string     `gorm:"column:icon;type:text" json:"icon"`
 	Description string     `gorm:"column:description;type:varchar(500)" json:"description"`
 	URL         string     `gorm:"column:url;type:varchar(255);not null" json:"url"`
